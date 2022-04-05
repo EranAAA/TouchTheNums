@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touching The Numbers</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="init(16, this)">
+    <h1>Touching The Numbers</h1>
+    <h2 id="gameTime">Timer: 0.000</h2>
+    <button id="myBtn" onclick="manageButton(this)">Play</button>
+
+    <form>
+      <p>Chose your level!</p>
+      <div>
+        <input
+          id="inputEasy"
+          onclick="init(16, this)"
+          value="16"
+          type="radio"
+          name="contact"
+          checked
+        />
+        <label for="choice1">Easy</label>
+
+        <input
+          id="inputHard"
+          onclick="init(25, this)"
+          value="25"
+          type="radio"
+          name="contact"
+        />
+        <label for="choice2">Hard</label>
+
+        <input
+          id="inputExtream"
+          onclick="init(36, this)"
+          value="36"
+          type="radio"
+          name="contact"
+        />
+        <label for="choice3">Extream</label>
+      </div>
+    </form>
+
+    <table class="center" border="1" cellpadding="10">
+      <tbody class="board"></tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
